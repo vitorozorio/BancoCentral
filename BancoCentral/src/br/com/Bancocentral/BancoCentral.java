@@ -22,25 +22,22 @@ public class BancoCentral {
             System.out.println("escolha uma operação\n1 para saque\n2 para deposito");
             opcao = texto.nextInt();
 
-              switch (opcao) {
-
-                  case 1 :
-                      System.out.print("valor do saque : ");
-                      C1.saque = texto.nextDouble();
-                      C1.setSaque(C1.saque);
-                      C1.sacar(C1.saque);
-                      C1.mostrarDados();
-                      break;
-
-                  case 2 :
-                      System.out.print("Valor do deposito : ");
-                      C1.deposito = texto.nextDouble();
-                      C1.setDeposito(C1.deposito);
-                      C1.depositar(C1.deposito);
-                      C1.mostrarDados();
-                      break;
-
-              }
+            switch (opcao) {
+                case 1 -> {
+                    System.out.print("valor do saque : ");
+                    C1.saque = texto.nextDouble();
+                    C1.setSaque(C1.saque);
+                    C1.sacar(C1.saque);
+                    C1.mostrarDados();
+                }
+                case 2 -> {
+                    System.out.print("Valor do deposito : ");
+                    C1.deposito = texto.nextDouble();
+                    C1.setDeposito(C1.deposito);
+                    C1.depositar(C1.deposito);
+                    C1.mostrarDados();
+                }
+            }
 
 
         } else if (conta == C2.getNumeroDaConta()) {
@@ -49,23 +46,20 @@ public class BancoCentral {
             opcao = texto.nextInt();
 
             switch (opcao) {
-
-                case 1 :
+                case 1 -> {
                     System.out.print("valor do saque : ");
                     C2.saque = texto.nextDouble();
                     C2.setSaque(C2.saque);
                     C2.sacar(C2.saque);
                     C2.mostrarDados();
-                    break;
-
-                case 2 :
+                }
+                case 2 -> {
                     System.out.print("Valor do deposito : ");
                     C2.deposito = texto.nextDouble();
                     C2.setDeposito(C2.deposito);
                     C2.depositar(C2.deposito);
                     C2.mostrarDados();
-                    break;
-
+                }
             }
 
 
@@ -75,23 +69,20 @@ public class BancoCentral {
             opcao = texto.nextInt();
 
             switch (opcao) {
-
-                case 1 :
+                case 1 -> {
                     System.out.print("valor do saque : ");
                     C2.saque = texto.nextDouble();
                     C2.setSaque(C2.saque);
                     C2.sacar(C2.saque);
                     C2.mostrarDados();
-                    break;
-
-                case 2 :
+                }
+                case 2 -> {
                     System.out.print("Valor do deposito : ");
                     C3.deposito = texto.nextDouble();
                     C3.setDeposito(C3.deposito);
                     C3.depositar(C3.deposito);
                     C3.mostrarDados();
-                    break;
-
+                }
             }
 
 
