@@ -68,7 +68,7 @@ public class Cliente {
 
       System.out.print("\ncliente : " + this.nameCliente);
       System.out.printf("\nsaldo do cliente :  %.2f ", this.saldo );
-      System.out.printf("\nlimite de credito fornecido pelo banco :  %.2f ", LimiteCheque);
+      System.out.printf("\nlimite de credito fornecido pelo banco :  %.2f ", this.LimiteCheque);
 
 
 
