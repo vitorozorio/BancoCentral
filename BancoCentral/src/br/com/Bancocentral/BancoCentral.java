@@ -38,7 +38,6 @@ public class BancoCentral {
                       C1.setDeposito(C1.deposito);
                       C1.depositar(C1.deposito);
                       C1.mostrarDados();
-
                       break;
 
               }
@@ -65,8 +64,8 @@ public class BancoCentral {
                     C2.setDeposito(C2.deposito);
                     C2.depositar(C2.deposito);
                     C2.mostrarDados();
-
                     break;
+
             }
 
 
@@ -91,8 +90,8 @@ public class BancoCentral {
                     C3.setDeposito(C3.deposito);
                     C3.depositar(C3.deposito);
                     C3.mostrarDados();
-
                     break;
+
             }
 
 

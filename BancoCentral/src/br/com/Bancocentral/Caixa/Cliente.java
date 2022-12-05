@@ -7,10 +7,8 @@ public class Cliente {
     private double saldo = 50.5;
     private double saldoExpecial = 15000000;
     private double LimiteCheque = -500.50;
-    public double saque;
-    public double deposito;
+    public double saque, deposito;
     private double usoCheque = 0;
-    private boolean statusEspecial;
 
 
 
@@ -86,12 +84,11 @@ public class Cliente {
         }
 
         if (saldo >= saldoExpecial) {
-            this.statusEspecial = true;
             System.out.println("cliente de valor");
         }
 
 
     }
 
-    
+
 }
