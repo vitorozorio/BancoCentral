@@ -2,14 +2,10 @@ package br.com.Bancocentral.Caixa;
 
 public class Cliente {
 
-    private String nameCliente;
-    private int numeroDaConta;
+    private final String nameCliente;
+    private final int numeroDaConta;
     private double saldo = 50.5;
-    private double saldoExpecial = 15000000;
-    private double LimiteCheque = -500.50;
     public double saque, deposito;
-    private double usoCheque = 0;
-
 
 
     public Cliente(String nameCliente, int numeroDaConta) {
@@ -20,46 +16,26 @@ public class Cliente {
     }
 
     public int getNumeroDaConta() {
-        return numeroDaConta;
+        return this.numeroDaConta;
     }
 
-
-    public double getSaque() {
-
-        return this.saque;
-    }
 
     public void setSaque(double s) {
-
         this.saque = s;
-
-    }
-
-    public double getDeposito() {
-
-        return this.deposito;
     }
 
     public void setDeposito(double d) {
-
         this.deposito = d;
-
     }
 
 
 
-    public double sacar(double saque) {
-
+    public void sacar(double saque) {
         this.saldo = saldo-saque;
-
-        return saldo;
     }
 
-    public double depositar(double deposito) {
-
+    public void depositar(double deposito) {
         this.saldo = saldo+deposito;
-
-        return saldo;
     }
 
 
@@ -68,27 +44,23 @@ public class Cliente {
 
       System.out.print("\ncliente : " + this.nameCliente);
       System.out.printf("\nsaldo do cliente :  %.2f ", this.saldo );
-      System.out.printf("\nlimite de credito fornecido pelo banco :  %.2f ", this.LimiteCheque);
+        double limiteCheque = -500.50;
+        System.out.printf("\nlimite de credito fornecido pelo banco :  %.2f ", limiteCheque);
 
+        double usoCheque = 0;
+        if (this.saldo < usoCheque) {
 
-
-
-        if (this.saldo < this.usoCheque) {
-
-            System.out.println("\natenção voce esta fazendo uso do cheque especial");
-            System.out.printf("seu saldo :  %.2f ", this.saldo);
-            System.out.println("");
-            System.out.printf("seu limite atual de credito :  %.2f ", this.LimiteCheque - this.saldo);
-            System.out.println("");
+            System.out.println("\natenção voce esta fazendo uso do cheque especial\n");
+            System.out.printf("limite de credito usado  :  %.2f ",usoCheque + this.saldo);
+            System.out.println();
 
         }
 
+        double saldoExpecial = 15000000;
         if (saldo >= saldoExpecial) {
             System.out.println("cliente de valor");
         }
 
-
     }
-
 
 }
